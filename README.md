@@ -1,39 +1,33 @@
-# reCurrent Additive Network for Temporal RIsk Prediction (CANTRIP)
-A TensorFlow model for predicting temporal (disease) risk based on retrospective analysis of longitudinal clinical notes.
+# Citation
+Goodwin, T. R., & Demner-Fushman, D. (2020). A customizable deep learning model for nosocomial risk prediction from critical care notes with indirect supervision. Journal of the American Medical Informatics Association, 27(4), 567-576.
+
+# Original Repository
+https://github.com/h4ste/cantrip
 
 # Dependencies
-- python >= 3.6
-- tensorflow >= 1.14
-- absl-py >= 0.7.0
+- python >= 3.8.10
+- tensorflow >= 2.8.0
+- absl-py >= 1.0.0
 - python-dateutil >= 2.6.1
-- numpy >= 1.16.0
-- scikit-learn >= 0.19.0
-- scipy >= 0.13.3
+- numpy >= 1.22.3
+- scikit-learn >= 1.0.2
+- scipy >= 1.8.0
 
-# Installation
-First, install the required dependencies:
-```bash
-$ pip -r requirements.txt
-```
-Then, install TensorFlow with or without gpu support:
+# Data download
+Apply for credentialing and training access at https://physionet.org. The MIMIC-III database can be downloaded at https://physionet.org/content/mimiciii/1.4/. 
 
-| CPU only | GPU Enabled |
-|:---------|:------------|
-| `$ pip install tensorflow>=1.14.0` | `$ pip install tensorflow-gpu>=1.14.0` |
-
-Optionally install any of the below optional dependencies:
-
-| Dependency | Purpose |
-|-----------:|:--------|
-| tqdm       | pretty console progress logging |
-| tabulate   | printing LaTeX style results tables |
-
----
+# Preprocessing
+Found at https://github.com/alexhuynh1999/mimic-on-spark. This stage of the repository filters the data by date of birth only, and is done automatically.
 
 ## Usage
+
+The rest is taken from the original repository.
+
 ```bash
 $ run_experiment.py --data_dir $DATA_DIR --output_dir $OUTPUT_DIR [flags]
 ```
+
+
 
 ### Required flags:
 ```
