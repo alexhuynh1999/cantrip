@@ -19,7 +19,7 @@ Apply for credentialing and training access at https://physionet.org. The MIMIC-
 # Preprocessing
 Found at https://github.com/alexhuynh1999/mimic-on-spark. This stage of the repository filters the data by date of birth only, and is done automatically.
 
-## Usage
+# Usage
 
 The rest is taken from the original repository.
 
